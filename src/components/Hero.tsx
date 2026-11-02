@@ -8,7 +8,7 @@ export function Hero() {
         <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-[22px]">
           <span className="inline-flex items-center gap-2.5 font-mono text-[13px] text-fg-2">
             <span className="size-2 rounded-full bg-accent shadow-[0_0_0_4px_rgb(94_234_212/0.15)]" aria-hidden="true" />
-            Open to full-stack roles · {siteConfig.location}
+            Open to full-stack developer · {siteConfig.location}
           </span>
           <h1 className="text-[clamp(52px,8vw,92px)] leading-[0.98] font-bold tracking-[-0.035em]">{siteConfig.name}</h1>
           <p className="max-w-[600px] font-display text-[clamp(21px,2.6vw,28px)] leading-[1.3] text-fg-2">
@@ -66,7 +66,7 @@ function CodeCard() {
           </span>
         ))}
         {"  "}
-        <span className="text-syntax-keyword">boolean</span> openToWork <span className="text-muted">// </span>
+        <span className="text-syntax-keyword">boolean</span> writesTests <span className="text-muted">// </span>
         <span className="text-syntax-bool">true</span>
         {"\n"}) {"{}"}
         <span className="inline-block h-[1.1em] w-[9px] animate-blink bg-accent align-[-3px]" aria-hidden="true" />
