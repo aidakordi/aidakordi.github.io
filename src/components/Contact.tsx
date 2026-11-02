@@ -65,7 +65,7 @@ export function Contact({ endpoint = siteConfig.formEndpoint }: ContactProps) {
             Let's build something together.
           </h2>
           <p className="max-w-[460px] text-[17px] text-muted">
-            I'm open to full-stack and software developer roles. Send me a message here or connect with me on LinkedIn.
+            Have a question or want to connect? Send me a message here or reach me on LinkedIn.
           </p>
           <div className="flex flex-wrap gap-3 pt-1.5">
             <SocialLink href={siteConfig.linkedInUrl} label="LinkedIn">
