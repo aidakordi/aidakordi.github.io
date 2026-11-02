@@ -1,0 +1,3 @@
+# Asks search engines not to list this site. Delete this file if you want it to show up in Google.
+User-agent: *
+Disallow: /

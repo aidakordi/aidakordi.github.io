@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Design tokens: used as Tailwind classes like bg-surface, text-muted, font-display */
+@theme {
+  --color-bg: #0b0d12;
+  --color-surface: #12161f;
+  --color-surface-2: #171c27;
+  --color-chip: #1a202c;
+  --color-line: #1e2430;
+  --color-line-2: #2a3240;
+  --color-fg: #e8eaf0;
+  --color-fg-2: #aeb6c4;
+  --color-muted: #9aa3b2;
+  --color-accent: #5eead4;
+  --color-syntax-keyword: #c792ea;
+  --color-syntax-bool: #f6b26b;
+
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --animate-blink: blink 1.1s steps(1) infinite;
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}
+
+@layer base {
+  :root { color-scheme: dark; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    margin: 0;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { @apply font-display; text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+  dialog::backdrop { background: rgb(5 7 10 / 0.72); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1200px];
+    padding-left: max(24px, env(safe-area-inset-left, 0px));
+    padding-right: max(24px, env(safe-area-inset-right, 0px));
+  }
+  @media (max-width: 480px) {
+    .wrap {
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+    }
+  }
+  .arrow-list > li { @apply flex gap-3; }
+  .arrow-list > li::before { content: "→"; @apply font-mono text-accent shrink-0; }
+}
