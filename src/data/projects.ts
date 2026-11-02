@@ -27,8 +27,7 @@ export const projects: Project[] = [
     title: "Secure Messaging Feature",
     kind: "company",
     kindLabel: "Company project",
-    when: "Sep 2026 – now",
-    inProgress: true,
+    when: "Sep 2026",
     role: "Back-end design",
     stack: ["Java", "Spring Boot", "SQL"],
     flow: ["thread → messages", "→ **unread** tracking · **role-based** access"],
@@ -42,7 +41,7 @@ export const projects: Project[] = [
       "Role-based access control so people only see the conversations they are allowed to see.",
     ],
     result:
-      "A messaging foundation designed around protecting sensitive user data from the start. Work is ongoing.",
+      "A messaging foundation designed around protecting sensitive user data from the start.",
     confidential: true,
   },
   {
